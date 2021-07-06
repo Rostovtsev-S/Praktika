@@ -1,0 +1,31 @@
+#include <string>
+#include <iostream>
+#include <cmath>
+ 
+using namespace std;
+int main()
+{   setlocale(LC_ALL, "Rus");
+    while (true)
+    {   int y; cout << "Введите год : "; cin >> y;
+        if (y <= 0) break;
+        int k = abs(2000-y) % 12;
+        
+        const char* const m[] =
+        {   "Дракона" ,
+            "Змеи"    ,
+            "Лошади"  ,
+            "Козы"    ,
+            "Обезьяны",
+            "Петуха"  ,
+            "Собаки"  ,
+            "Свиньи"  ,
+            "Крысы"   ,
+            "Быка"    ,
+            "Тигра"   ,
+            "Кролика"
+        };
+        
+        cout << "Год " << m[k] << '\n';
+    }
+    return 0;
+}
